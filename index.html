@@ -2,40 +2,212 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>양우 ❤️ 지수 모바일 청첩장</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>우리 결혼합니다</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR&family=Noto+Sans+KR:wght@300;500&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Noto Sans KR', sans-serif;
+      background-color: #fdfbf7;
+      color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 1rem;
+    }
+    .invitation-container {
+      background: white;
+      max-width: 500px;
+      width: 100%;
+      padding: 2rem;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      border-radius: 20px;
+      text-align: center;
+    }
+    .title {
+      font-family: 'Noto Serif KR', serif;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: #925f35;
+    }
+    .photo {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 1.5rem;
+    }
+    .message {
+      font-size: 1rem;
+      margin-bottom: 1.5rem;
+      line-height: 1.6;
+    }
+    .date-place {
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: #555;
+      margin-bottom: 1.5rem;
+    }
+    .names {
+      font-size: 1rem;
+      margin-top: 1rem;
+      color: #666;
+      margin-bottom: 1.5rem;
+    }
+    .footer {
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      color: #aaa;
+    }
+
+    /* 버튼 스타일 */
+    button {
+      background-color: #925f35;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      padding: 10px 20px;
+      font-size: 1rem;
+      cursor: pointer;
+      margin: 0.5rem;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #b07a56;
+    }
+
+    /* 계좌번호 숨김 영역 */
+    #account-info {
+      margin-top: 1rem;
+      background: #fff1e6;
+      color: #6b3e1e;
+      padding: 15px;
+      border-radius: 10px;
+      font-weight: 600;
+      display: none;
+    }
+
+    /* RSVP 폼 스타일 */
+    form {
+      text-align: left;
+      margin-top: 2rem;
+    }
+    label {
+      display: block;
+      margin-top: 12px;
+      font-weight: 600;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 6px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+      font-family: inherit;
+      box-sizing: border-box;
+    }
+    textarea {
+      resize: vertical;
+    }
+    form button[type="submit"] {
+      width: 100%;
+      margin-top: 16px;
+      background-color: #925f35;
+    }
+  </style>
 </head>
 <body>
-  <header class="hero">
-    <h1>양우 ❤️ 지수</h1>
-    <p>2025년 11월 9일 일요일<br>우리, 부부로 마주하는 날</p>
-  </header>
-
-  <section class="intro">
-    <p>
-      낯선 설렘이 익숙한 다정이 되고<br>
-      매일의 안부가 평생의 약속이 되었습니다.<br>
-      우리, 부부로 마주 하는 소중한 날을<br>
-      함께 축복해 주세요.
+  <div class="invitation-container">
+    <h1 class="title">우리 결혼합니다</h1>
+    <img class="photo" src="your_photo.jpg" alt="메인사진.jpg" />
+    <p class="message">
+      낯선 설렘이 익숙한 다정이 되고<br />
+      매일의 안부가 평생의 약속이 되었습니다.<br />
+      우리, 부부로 마주 하는<br />
+      소중한 날을 함께 축복해주세요.
     </p>
-  </section>
+    <div class="date-place">
+      💍 2025년 11월 9일 (일)<br />
+      📍 웨딩그룹위더스 영등포 7층 펠리체홀
+    </div>
+    <div class="names">
+      박양우 · 김지수 드림
+    </div>
 
-  <section class="info">
-    <h2>결혼식 안내</h2>
-    <p><strong>일시:</strong> 2025년 11월 9일(일) 오후 1시 20분</p>
-    <p><strong>장소:</strong> 웨딩그룹위더스 영등포 7층 펠리체홀</p>
-    <a class="map" href="https://naver.me/xxyyzz">📍 위치 보기</a>
-  </section>
+    <!-- 계좌번호 보기 버튼 -->
+    <button id="show-account-btn">계좌번호 보기</button>
+    <div id="account-info">
+      국민은행 123-456-789012 (김지수)<br />
+      농협은행 987-654-321098 (박민준)
+    </div>
 
-  <section class="contact">
-    <h2>연락처 및 계좌</h2>
-    <p><strong>신랑:</strong> 010-1234-5678 / 국민 123-456-789012 (우진)</p>
-    <p><strong>신부:</strong> 010-9876-5432 / 농협 987-654-321098 (지수)</p>
-  </section>
+    <!-- 지도 링크 버튼 -->
+    <a href="https://map.kakao.com/?urlX=126.9784&urlY=37.5665&urlLevel=4" target="_blank" rel="noopener" style="display:inline-block; background:#925f35; color:#fff; padding:12px 20px; border-radius:10px; text-decoration:none; margin: 15px 0;">카카오맵 위치 보기</a>
 
-  <footer class="footer">
-    <p>💌 마음을 전해주셔서 감사합니다</p>
-  </footer>
+    <!-- RSVP 폼 -->
+    <form id="rsvp-form">
+      <h2>하객 참석 여부 확인</h2>
+      <label for="name">이름</label>
+      <input type="text" id="name" name="name" placeholder="이름을 입력해주세요" required />
+
+      <label for="attendance">참석 여부</label>
+      <select id="attendance" name="attendance" required>
+        <option value="">선택해주세요</option>
+        <option value="참석">참석</option>
+        <option value="불참">불참</option>
+      </select>
+
+      <label for="message">메시지 (선택)</label>
+      <textarea id="message" name="message" rows="3" placeholder="축하 메시지를 남겨주세요"></textarea>
+
+      <button type="submit">보내기</button>
+    </form>
+
+    <div id="response-msg" style="display:none; margin-top:1rem; color:#4caf50; font-weight:600;"></div>
+
+    <div class="footer">
+      © 2025.11.09
+    </div>
+  </div>
+
+  <script>
+    // 계좌번호 토글
+    const accountBtn = document.getElementById('show-account-btn');
+    const accountInfo = document.getElementById('account-info');
+    accountBtn.addEventListener('click', () => {
+      if (accountInfo.style.display === 'none' || accountInfo.style.display === '') {
+        accountInfo.style.display = 'block';
+        accountBtn.textContent = '계좌번호 숨기기';
+      } else {
+        accountInfo.style.display = 'none';
+        accountBtn.textContent = '계좌번호 보기';
+      }
+    });
+
+    // RSVP 폼 제출 처리 (로컬에서 보여주기용)
+    const form = document.getElementById('rsvp-form');
+    const responseMsg = document.getElementById('response-msg');
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      const name = form.name.value.trim();
+      const attendance = form.attendance.value;
+      const message = form.message.value.trim();
+
+      if (!name || !attendance) {
+        alert('이름과 참석 여부를 꼭 선택해주세요.');
+        return;
+      }
+
+      // 실제로는 서버 전송하거나 Google Form 등과 연동해야 함
+      // 여기서는 제출 성공 메시지만 표시
+      responseMsg.style.display = 'block';
+      responseMsg.textContent = `${name}님, 소중한 답변 감사합니다!`;
+
+      form.reset();
+    });
+  </script>
 </body>
 </html>
